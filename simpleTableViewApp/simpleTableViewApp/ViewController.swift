@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
   // переменная с масивов в котором уже есть рестораны по умолчанию
   var restaurantNames = ["Ogonek", "Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
   
-  var restaurantImage = ["ogonek.jpg", "elu,jpg", "bonsai.jpg", "dastathan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakesy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
+  var restaurantImage = ["ogonek.jpg", "ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
   
   // функция сколько рядом находится в одной секции
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,9 +26,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
     
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as! UITableViewCell
     
-    cell.textLabel?.text = restaurantNames[indexPath.row] // отображает название ресторанов из массива
-    
-    
+    cell.textLabel?.text = restaurantNames[indexPath.row] // отображает название ресторанов из массива restaurantNames
+    cell.imageView?.image =  UIImage(named: restaurantImage[indexPath.row]) // отображает картинки из массива restaurantImage
     return cell
   } // выводится список Title
   
