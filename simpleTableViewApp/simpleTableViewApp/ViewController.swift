@@ -15,6 +15,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
   
   var restaurantImage = ["ogonek.jpg", "ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
   
+  // функция убирает старут бар
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
+  
   // функция сколько рядом находится в одной секции
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return restaurantNames.count // вернет столько названий сколько элементов в массиве restaurantNames
