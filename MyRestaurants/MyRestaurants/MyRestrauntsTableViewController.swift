@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSource, UITabBarDelegate {
+class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSource, UITabBarDelegate{
   
   // переменная с масивов в котором уже есть рестораны по умолчанию
   var restaurantNames = ["Ogonek", "Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
