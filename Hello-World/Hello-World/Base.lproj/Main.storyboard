@@ -25,13 +25,31 @@
                                     <action selector="showAllertMessege" destination="BYZ-38-t0r" eventType="touchUpInside" id="llJ-nd-f3h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beY-0b-BJi">
+                                <rect key="frame" x="129" y="527" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULc-AX-6Ce">
+                                <rect key="frame" x="127" y="335" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="beY-0b-BJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3UO-Ov-9oK"/>
+                            <constraint firstItem="ULc-AX-6Ce" firstAttribute="top" secondItem="JKA-9P-HVf" secondAttribute="bottom" constant="27" id="4bG-Ud-ztk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="beY-0b-BJi" secondAttribute="bottom" constant="20" id="LFs-jC-ZwE"/>
                             <constraint firstItem="JKA-9P-HVf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QHD-aL-PVw"/>
                             <constraint firstItem="JKA-9P-HVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z3F-bx-UeX"/>
+                            <constraint firstItem="ULc-AX-6Ce" firstAttribute="leading" secondItem="JKA-9P-HVf" secondAttribute="leading" id="vB4-hE-8ky"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
