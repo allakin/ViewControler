@@ -10,7 +10,7 @@ import UIKit
 
 class MyRestarauntsTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var thumbnailImageView: UIView!
+  @IBOutlet weak var thumbnailImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var LocationLabel: UILabel!
   @IBOutlet weak var typeLabel: UILabel!
