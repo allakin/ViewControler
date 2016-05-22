@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
     
     cell.textLabel?.text = restaurantNames[indexPath.row] // отображает название ресторанов из массива
     
+    
     return cell
   } // выводится список Title
   
