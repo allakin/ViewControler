@@ -8,6 +8,14 @@
 
 import UIKit
 
+// Этапы действия
+// 1. Определить фон, определить секции
+// 2. Создать и добавить массив из названия ресторанов
+// 3. Отобразить название ресторанов из списока
+// 4. Добравить картинки ресторанов и создать массив из название и расширений файлов
+// 5. Отобразить картинку под своим названием
+// 6. Создать функцию которая убирает status bar на это странице
+
 class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate {
   
   // переменная с масивов в котором уже есть рестораны по умолчанию
@@ -45,7 +53,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
+  
 }
 
