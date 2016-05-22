@@ -36,7 +36,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKe-8B-Akl">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKe-8B-Akl">
                                             <rect key="frame" x="95" y="55" width="207" height="21"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,6 +44,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="LocationLabel" destination="x51-dW-FQL" id="dAm-At-oAh"/>
+                                    <outlet property="nameLabel" destination="qfC-u4-IET" id="FO5-Ru-CHI"/>
+                                    <outlet property="thumbnailImageView" destination="45t-6M-NdH" id="9JW-LG-4qB"/>
+                                    <outlet property="typeLabel" destination="CKe-8B-Akl" id="qmq-wm-r8o"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
