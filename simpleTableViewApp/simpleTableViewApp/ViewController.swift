@@ -15,17 +15,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
   
   // функция сколько рядом находится в одной секции
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    returt 1
+    return restaurantNames.count // вернет столько названий сколько элементов в массиве restaurantNames
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    let cellIndentifier = "Cell"
+    let cellIndentifier = "Cell" // дает индефикатор ячейки
     
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as! UITableViewCell
     
+    cell.textLabel?.text = restaurantNames[indexPath.row] // отображает название ресторанов из массива
+    
     return cell
-  }
+  } // выводится список Title
   
   override func viewDidLoad() {
     super.viewDidLoad()
