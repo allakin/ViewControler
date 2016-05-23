@@ -15,6 +15,10 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
   
   var restaurantImage = ["ogonek.jpg", "ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
   
+  var restaurantType = ["ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан-клуб", "ресторан", "ресторан", "ресторанный комплекс", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан"]
+  
+  var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
+  
   override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +56,8 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
       let cell = tableView.dequeueReusableCellWithIdentifier(cellIndetifier, forIndexPath: indexPath) as! MyRestarauntsTableViewCell
     
       cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
+      cell.locationLabel.text = restaurantLocation[indexPath.row]
+      cell.typeLabel.text = restaurantType[indexPath.row]
       cell.nameLabel.text = restaurantNames[indexPath.row]
     
       // скругление углов

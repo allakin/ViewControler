@@ -12,7 +12,7 @@ class MyRestarauntsTableViewCell: UITableViewCell {
 
   @IBOutlet weak var thumbnailImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var LocationLabel: UILabel!
+  @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var typeLabel: UILabel!
   
   
