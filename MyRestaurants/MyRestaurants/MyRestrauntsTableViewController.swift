@@ -29,8 +29,16 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
     actionMenu.addAction(cancelAction)
     
     // создаем действие звонок
-    let callAction = UIAlertAction(title: "Звоним 1234", style: .Default, handler: nil)
-    actionMenu.addAction(callAction)
+    let callActionHandler = {(action: UIAlertAction!) -> Void in
+      
+      // добавим текст для алерта
+      let warningMessage = UIAlertController(title: "Сервис временно не доступен", message: "В данный момент вызов не может быть выполнен", preferredStyle: .Alert)
+      // добавить кнопку для алерте
+      let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+      warningMessage.addAction(okAction)
+      
+      self.presentViewController(actionMenu, animated: true, completion: nil)
+    }
     
     // отображаем контролер
     self.presentViewController(actionMenu, animated: true, completion: nil)
