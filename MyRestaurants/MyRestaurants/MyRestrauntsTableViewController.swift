@@ -19,6 +19,23 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
   
   var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
   
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    // создан алерт контролер
+    let actionMenu = UIAlertController(title: nil, message: "Что делаем", preferredStyle: .ActionSheet)
+    
+    // создаем дейсвие контролера 
+    let cancelAction = UIAlertAction(title: "Отмена", style: .Cancel, handler: nil)
+    actionMenu.addAction(cancelAction)
+    
+    // создаем действие звонок
+    let callAction = UIAlertAction(title: "Звоним 1234", style: .Default, handler: nil)
+    actionMenu.addAction(callAction)
+    
+    // отображаем контролер
+    self.presentViewController(actionMenu, animated: true, completion: nil)
+  }
+  
   override func viewDidLoad() {
         super.viewDidLoad()
 
