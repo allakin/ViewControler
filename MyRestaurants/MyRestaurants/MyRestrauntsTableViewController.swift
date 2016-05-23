@@ -33,13 +33,15 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
   // MARK: - Table view data source
 
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-      // #warning Incomplete implementation, return the number of sections
-      return 1
+    // #warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1
   }
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      // #warning Incomplete implementation, return the number of rows
-      return restaurantNames.count
+    // #warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return restaurantNames.count
   }
 
 
