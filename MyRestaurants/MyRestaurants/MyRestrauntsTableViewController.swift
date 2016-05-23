@@ -28,6 +28,17 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
     let cancelAction = UIAlertAction(title: "Отмена", style: .Cancel, handler: nil)
     actionMenu.addAction(cancelAction)
     
+    // ставить галочку на против того место который посетили
+    let iHaveBeenThereAction = UIAlertController(title: "Я тут был", message: "Вы были здесь", preferredStyle: {(action: UIAlertAction!) -> Void in
+      
+      // обращаемся к ячейки
+      let cell = tableView.cellForRowAtIndexPath(indexPath)
+      //если ячейка создана то .accessoryType = .Checkmark
+      cell?.accessoryType = .Checkmark
+      
+    })
+    actionMenu.addAction(iHaveBeenThereAction)
+    
     // создаем действие звонок
     let callActionHandler = {(action: UIAlertAction!) -> Void in
       
