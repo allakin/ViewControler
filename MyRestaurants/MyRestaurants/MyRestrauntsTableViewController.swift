@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSource, UITabBarDelegate{
+class MyRestrauntsTableViewController: UITableViewController{
   
   // переменная с масивов в котором уже есть рестораны по умолчанию
   var restaurantNames = ["Ogonek", "Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
@@ -29,7 +29,7 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
     actionMenu.addAction(cancelAction)
     
     // ставить галочку на против того место который посетили
-    let iHaveBeenThereAction = UIAlertAction(title: "Я тут был", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+    let iHaveBeenThereAction = UIAlertAction(title: "Я тут был", style: .Default, handler: {(action: UIAlertAction!) -> Void in
       
       // обращаемся к ячейки
       let cell = tableView.cellForRowAtIndexPath(indexPath)
