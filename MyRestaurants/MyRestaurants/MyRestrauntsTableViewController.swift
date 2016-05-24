@@ -29,7 +29,7 @@ class MyRestrauntsTableViewController: UITableViewController, UITableViewDataSou
     actionMenu.addAction(cancelAction)
     
     // ставить галочку на против того место который посетили
-    let iHaveBeenThereAction = UIAlertController(title: "Я тут был", message: "Вы были здесь", preferredStyle: {(action: UIAlertAction!) -> Void in
+    let iHaveBeenThereAction = UIAlertAction(title: "Я тут был", style: .Default, handler: { (action: UIAlertAction!) -> Void in
       
       // обращаемся к ячейки
       let cell = tableView.cellForRowAtIndexPath(indexPath)
