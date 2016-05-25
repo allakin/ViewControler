@@ -9,12 +9,17 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+  
+  @IBOutlet var restaurantImageView: UIImageView!
+  var restaurantImages: String!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Do any additional setup after loading the view.
+    
+    self.restaurantImageView.image = UIImage(named: restaurantImages)
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

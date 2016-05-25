@@ -232,14 +232,19 @@ class MyRestrauntsTableViewController: UITableViewController{
    }
    */
   
-  /*
+  
    // MARK: - Navigation
    
    // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using [segue destinationViewController].
-   // Pass the selected object to the new view controller.
-   }
-   */
+  
+   // переход на новый контролер DetailsViewController
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showDetailsSegue" {
+      if let indexPath = self.tableView.indexPathForSelectedRow{
+        let destinationVC = segue.destinationViewController as! DetailsViewController
+        destinationVC.restaurantImages = self.restaurantImage[indexPath.row]
+      }
+    }
+  }
   
 }
