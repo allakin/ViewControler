@@ -78,16 +78,44 @@ class MyRestrauntsTableViewController: UITableViewController{
   // добавим действие для удаление ячейки
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     
-    self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
-    self.restaurantNames.removeAtIndex(indexPath.row)
-    self.restaurantImage.removeAtIndex(indexPath.row)
-    self.restaurantType.removeAtIndex(indexPath.row)
-    self.restaurantLocation.removeAtIndex(indexPath.row)
+    //self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
+    //self.restaurantNames.removeAtIndex(indexPath.row)
+    //self.restaurantImage.removeAtIndex(indexPath.row)
+    //self.restaurantType.removeAtIndex(indexPath.row)
+    //self.restaurantLocation.removeAtIndex(indexPath.row)
     
     // self.tableView.reloadData()
     
     // удаление ячейки с анимацией fade
-    self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    //self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+  }
+  
+  // добавляем новый элемент в свайпе
+  override func tableView(_: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
+    
+    let allShareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Поделиться") { (UITableViewRowAction, indexPath: NSIndexPath!) -> Void in
+      
+      let allShareActionMenu = UIAlertController(title: nil, message: "Поделиться через", preferredStyle: .ActionSheet)
+      
+      // созданные кнопки
+      let emailShareAction = UIAlertAction(title: "Email", style: .Default, handler: nil)
+      let facebookShareAction = UIAlertAction(title: "Facebook", style: .Default, handler: nil)
+      let vklShareAction = UIAlertAction(title: "Vkontakte", style: .Default, handler: nil)
+      let cancellShareAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+      
+      // добавляем кнопки
+      allShareActionMenu.addAction(emailShareAction)
+      allShareActionMenu.addAction(facebookShareAction)
+      allShareActionMenu.addAction(vklShareAction)
+      allShareActionMenu.addAction(cancellShareAction)
+      
+      // отображаем кнопки
+      self.presentViewController(allShareActionMenu, animated: true, completion: nil)
+    }
+    
+    // возвращаем массив [AnyObject]
+    return [allShareAction]
+    
   }
   
   override func viewDidLoad() {
