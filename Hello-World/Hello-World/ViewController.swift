@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     // действие добавляет кнопку
     alertControler.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
     alertControler.addAction(UIAlertAction(title: "Cansel", style: UIAlertActionStyle.Default, handler: nil))
+    alertControler.addAction(UIAlertAction(title: "sdfsdf", style: UIAlertActionStyle.Destructive, handler: nil))
     
     // настройки анимации true - плавная, false - резкая
     self.presentViewController(alertControler, animated: true, completion: nil)
