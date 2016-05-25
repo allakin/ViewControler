@@ -37,6 +37,7 @@ class MyRestrauntsTableViewController: UITableViewController{
       self.restaurantAlreadyVisited[indexPath.row] = true
     })
     
+    //действие "я тут не был"
     let iHaveNeverBeenThereAction = UIAlertAction(title: "Я тут не был", style: .Default, handler: { (action: UIAlertAction) -> Void in
       
       let cell = tableView.cellForRowAtIndexPath(indexPath)
