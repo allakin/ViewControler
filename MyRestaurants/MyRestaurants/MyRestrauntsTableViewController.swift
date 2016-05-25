@@ -84,6 +84,7 @@ class MyRestrauntsTableViewController: UITableViewController{
     //self.restaurantType.removeAtIndex(indexPath.row)
     //self.restaurantLocation.removeAtIndex(indexPath.row)
     
+    // удаление без анимации
     // self.tableView.reloadData()
     
     // удаление ячейки с анимацией fade
@@ -113,8 +114,23 @@ class MyRestrauntsTableViewController: UITableViewController{
       self.presentViewController(allShareActionMenu, animated: true, completion: nil)
     }
     
+    // создаем кнопку delete
+    let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Удалить") { (UITableViewRowAction, NSIndexPath) -> Void in
+
+      self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
+      self.restaurantNames.removeAtIndex(indexPath.row)
+      self.restaurantImage.removeAtIndex(indexPath.row)
+      self.restaurantType.removeAtIndex(indexPath.row)
+      self.restaurantLocation.removeAtIndex(indexPath.row)
+      
+      self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+      
+    }
+    
+    allShareAction.backgroundColor = UIColor(red: 184 / 255, green: 226 / 255, blue: 181 / 255, alpha: 1.0)
+    
     // возвращаем массив [AnyObject]
-    return [allShareAction]
+    return [deleteAction, allShareAction]
     
   }
   
