@@ -115,7 +115,7 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
     
-    cell.nameLabel.text = restaurantImage[indexPath.row]
+    cell.nameLabel.text = restaurantNames[indexPath.row]
     cell.locationLabel.text = restaurantLocation[indexPath.row]
     cell.typeLabel.text = restaurantType[indexPath.row]
     
