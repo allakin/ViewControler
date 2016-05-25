@@ -46,6 +46,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="LocationLabel" destination="x51-dW-FQL" id="dAm-At-oAh"/>
+                                    <outlet property="locationLabel" destination="x51-dW-FQL" id="ScA-hA-1AM"/>
                                     <outlet property="nameLabel" destination="qfC-u4-IET" id="FO5-Ru-CHI"/>
                                     <outlet property="thumbnailImageView" destination="8dV-IY-bmk" id="wFw-Mu-zBj"/>
                                     <outlet property="typeLabel" destination="CKe-8B-Akl" id="qmq-wm-r8o"/>
