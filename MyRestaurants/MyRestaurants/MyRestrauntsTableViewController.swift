@@ -123,10 +123,13 @@ class MyRestrauntsTableViewController: UITableViewController{
     cell.thumbnailImageView.clipsToBounds = true
     
     
+    // выражение если нету галочки то .Checkmark если есть то .None
     cell.accessoryType = restaurantAlreadyVisited[indexPath.row] ? .Checkmark : .None
+    
+    // красим галочку в красный
     cell.tintColor = UIColor.redColor()
     
-    //      cell.accessoryView = UIImageView(image: UIImage(named: "check-icon-green.png"))
+    // cell.accessoryView = UIImageView(image: UIImage(named: "check-icon-green.png"))
     
     return cell
   }
