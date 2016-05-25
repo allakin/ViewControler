@@ -75,6 +75,21 @@ class MyRestrauntsTableViewController: UITableViewController{
     
   }
   
+  // добавим действие для удаление ячейки
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+    self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
+    self.restaurantNames.removeAtIndex(indexPath.row)
+    self.restaurantImage.removeAtIndex(indexPath.row)
+    self.restaurantType.removeAtIndex(indexPath.row)
+    self.restaurantLocation.removeAtIndex(indexPath.row)
+    
+    // self.tableView.reloadData()
+    
+    // удаление ячейки с анимацией fade
+    self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
