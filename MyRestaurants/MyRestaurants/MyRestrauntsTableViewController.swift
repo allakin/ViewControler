@@ -29,49 +29,49 @@ class MyRestrauntsTableViewController: UITableViewController{
     let cancelAction = UIAlertAction(title: "Отмена", style: .Cancel, handler: nil)
     actionMenu.addAction(cancelAction)
     
-    //действие "я тут был"
-    let iHaveBeenThereAction = UIAlertAction(title: "Я тут был", style: .Default, handler: { (action: UIAlertAction) -> Void in
-      
-      let cell = tableView.cellForRowAtIndexPath(indexPath)
-      cell?.accessoryType = .Checkmark
-      self.restaurantAlreadyVisited[indexPath.row] = true
-    })
-    
-    //действие "я тут не был"
-    let iHaveNeverBeenThereAction = UIAlertAction(title: "Я тут не был", style: .Default, handler: { (action: UIAlertAction) -> Void in
-      
-      let cell = tableView.cellForRowAtIndexPath(indexPath)
-      cell?.accessoryType = .None
-      self.restaurantAlreadyVisited[indexPath.row] = false
-    })
-    
-    //создаем ячейку и проверяем наличие .Checkmark и добавляем соответствующее действие
-    let cell = tableView.cellForRowAtIndexPath(indexPath)
-    
-    if cell?.accessoryType == .Checkmark {
-      actionMenu.addAction(iHaveNeverBeenThereAction)
-    } else {
-      actionMenu.addAction(iHaveBeenThereAction)
-    }
-    
-    //обработчик звонка
-    let callActionHandler = {(action: UIAlertAction!) -> Void in
-      let warningMessage = UIAlertController(title: "Сервис не доступен", message: "В данный момент вызов не может быть выполнен", preferredStyle: .Alert)
-      let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-      warningMessage.addAction(okAction)
-      
-      self.presentViewController(warningMessage, animated: true, completion: nil)
-      
-    }
-    
-    let callAction = UIAlertAction(title: "Зоним 1234567", style: .Default, handler: callActionHandler)
-    actionMenu.addAction(callAction)
-    
-    
-    //отображаем контроллер
-    self.presentViewController(actionMenu, animated: true, completion: nil)
-    
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//    //действие "я тут был"
+//    let iHaveBeenThereAction = UIAlertAction(title: "Я тут был", style: .Default, handler: { (action: UIAlertAction) -> Void in
+//      
+//      let cell = tableView.cellForRowAtIndexPath(indexPath)
+//      cell?.accessoryType = .Checkmark
+//      self.restaurantAlreadyVisited[indexPath.row] = true
+//    })
+//    
+//    //действие "я тут не был"
+//    let iHaveNeverBeenThereAction = UIAlertAction(title: "Я тут не был", style: .Default, handler: { (action: UIAlertAction) -> Void in
+//      
+//      let cell = tableView.cellForRowAtIndexPath(indexPath)
+//      cell?.accessoryType = .None
+//      self.restaurantAlreadyVisited[indexPath.row] = false
+//    })
+//    
+//    //создаем ячейку и проверяем наличие .Checkmark и добавляем соответствующее действие
+//    let cell = tableView.cellForRowAtIndexPath(indexPath)
+//    
+//    if cell?.accessoryType == .Checkmark {
+//      actionMenu.addAction(iHaveNeverBeenThereAction)
+//    } else {
+//      actionMenu.addAction(iHaveBeenThereAction)
+//    }
+//    
+//    //обработчик звонка
+//    let callActionHandler = {(action: UIAlertAction!) -> Void in
+//      let warningMessage = UIAlertController(title: "Сервис не доступен", message: "В данный момент вызов не может быть выполнен", preferredStyle: .Alert)
+//      let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//      warningMessage.addAction(okAction)
+//      
+//      self.presentViewController(warningMessage, animated: true, completion: nil)
+//      
+//    }
+//    
+//    let callAction = UIAlertAction(title: "Зоним 1234567", style: .Default, handler: callActionHandler)
+//    actionMenu.addAction(callAction)
+//    
+//    
+//    //отображаем контроллер
+//    self.presentViewController(actionMenu, animated: true, completion: nil)
+//    
+//    tableView.deselectRowAtIndexPath(indexPath, animated: true)
     
   }
   

@@ -14,6 +14,7 @@
 		7303F0031CF21070004DC896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7303F0011CF21070004DC896 /* LaunchScreen.storyboard */; };
 		7303F00B1CF21197004DC896 /* MyRestrauntsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */; };
 		7303F00D1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */; };
+		738CB4121CF605BA00DEEFA3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CB4111CF605BA00DEEFA3 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7303F0041CF21070004DC896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRestrauntsTableViewController.swift; sourceTree = "<group>"; };
 		7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRestarauntsTableViewCell.swift; sourceTree = "<group>"; };
+		738CB4111CF605BA00DEEFA3 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = ../DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		7303EFF71CF21070004DC896 /* MyRestaurants */ = {
 			isa = PBXGroup;
 			children = (
+				738CB4111CF605BA00DEEFA3 /* DetailsViewController.swift */,
 				7303EFF81CF21070004DC896 /* AppDelegate.swift */,
 				7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */,
 				7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */,
@@ -102,6 +105,7 @@
 				TargetAttributes = {
 					7303EFF41CF21070004DC896 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9T23CDVWRT;
 					};
 				};
 			};
@@ -145,6 +149,7 @@
 				7303F00B1CF21197004DC896 /* MyRestrauntsTableViewController.swift in Sources */,
 				7303EFF91CF21070004DC896 /* AppDelegate.swift in Sources */,
 				7303F00D1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift in Sources */,
+				738CB4121CF605BA00DEEFA3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +263,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyRestaurants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Swift.MyRestaurants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -270,10 +278,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyRestaurants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Swift.MyRestaurants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
