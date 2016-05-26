@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet var restaurantImageView: UIImageView!
-  var restaurantImages: String!
+  var restaurant: Restaurant!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
     // Do any additional setup after loading the view.
     
     // отображение картинок
-    self.restaurantImageView.image = UIImage(named: restaurantImages)
+    self.restaurantImageView.image = UIImage(named: restaurant.image)
   }
 
     override func didReceiveMemoryWarning() {
