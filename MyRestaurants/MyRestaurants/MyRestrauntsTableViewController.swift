@@ -10,16 +10,35 @@ import UIKit
 
 class MyRestrauntsTableViewController: UITableViewController{
   
-  // переменная с масивов в котором уже есть рестораны по умолчанию
-  var restaurantNames = ["Ogonek Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
+//  // переменная с масивов в котором уже есть рестораны по умолчанию
+//  var restaurantNames = ["Ogonek Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
+//  
+//  var restaurantImage = ["ogonek", "elu", "bonsai", "dastarhan", "indokitay", "x.o", "balkan", "respublika", "speakeasy", "morris", "istorii", "klassik", "love", "shok", "bochka"]
+//  
+//  var restaurantType = ["ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан-клуб", "ресторан", "ресторан", "ресторанный комплекс", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан"]
+//  
+//  var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
   
-  var restaurantImage = ["ogonek", "elu", "bonsai", "dastarhan", "indokitay", "x.o", "balkan", "respublika", "speakeasy", "morris", "istorii", "klassik", "love", "shok", "bochka"]
+  // заменили верхние массивы на новый
+  var myRestaurants: [Restaurant] = [
+    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "Уфа", image: "ogonek.jpg", isVisited: false),
+    Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
+    Restaurant(name: "Bonsai", type: "ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
+    Restaurant(name: "Дастархан", type: "ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
+    Restaurant(name: "Индокитай", type: "ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
+    Restaurant(name: "X.O", type: "ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
+    Restaurant(name: "Балкан Гриль", type: "ресторан", location: "Уфа", image: "balkan.jpg", isVisited: false),
+    Restaurant(name: "Respublica", type: "ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
+    Restaurant(name: "Speak Easy", type: "ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
+    Restaurant(name: "Morris Pub", type: "ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
+    Restaurant(name: "Вкусные истории", type: "ресторан", location: "Уфа", image: "istorii.jpg", isVisited: false),
+    Restaurant(name: "Классик", type: "ресторан", location: "Уфа", image: "klassik.jpg", isVisited: false),
+    Restaurant(name: "Love&Life", type: "ресторан", location: "Уфа", image: "love.jpg", isVisited: false),
+    Restaurant(name: "Шок", type: "ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
+    Restaurant(name: "Бочка", type: "ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
   
-  var restaurantType = ["ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан-клуб", "ресторан", "ресторан", "ресторанный комплекс", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан"]
   
-  var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
-  
-  var restaurantAlreadyVisited = [Bool](count: 15, repeatedValue: false)
+  //var restaurantAlreadyVisited = [Bool](count: 15, repeatedValue: false)
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     //создаем алерт контроллер
@@ -116,12 +135,14 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     // создаем кнопку delete
     let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Удалить") { (UITableViewRowAction, NSIndexPath) -> Void in
-
-      self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
-      self.restaurantNames.removeAtIndex(indexPath.row)
-      self.restaurantImage.removeAtIndex(indexPath.row)
-      self.restaurantType.removeAtIndex(indexPath.row)
-      self.restaurantLocation.removeAtIndex(indexPath.row)
+      
+      // новый способ отображения информации
+      self.myRestaurants.removeAtIndex(indexPath.row)
+//      self.restaurantAlreadyVisited.removeAtIndex(indexPath.row)
+//      self.restaurantNames.removeAtIndex(indexPath.row)
+//      self.restaurantImage.removeAtIndex(indexPath.row)
+//      self.restaurantType.removeAtIndex(indexPath.row)
+//      self.restaurantLocation.removeAtIndex(indexPath.row)
       
       self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
       
@@ -160,7 +181,8 @@ class MyRestrauntsTableViewController: UITableViewController{
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return restaurantNames.count
+    return myRestaurants.count
+    //return restaurantNames.count
   }
   
   
@@ -172,18 +194,24 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     // Configure the cell...
     
-    cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
+    cell.thumbnailImageView.image = UIImage(named: myRestaurants[indexPath.row].image)
     
-    cell.nameLabel.text = restaurantNames[indexPath.row]
-    cell.locationLabel.text = restaurantLocation[indexPath.row]
-    cell.typeLabel.text = restaurantType[indexPath.row]
+    cell.nameLabel.text = myRestaurants[indexPath.row].name
+    cell.locationLabel.text = myRestaurants[indexPath.row].location
+    cell.typeLabel.text = myRestaurants[indexPath.row].type
+    
+//    cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
+//    cell.nameLabel.text = restaurantNames[indexPath.row]
+//    cell.locationLabel.text = restaurantLocation[indexPath.row]
+//    cell.typeLabel.text = restaurantType[indexPath.row]
     
     cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height / 2
     cell.thumbnailImageView.clipsToBounds = true
     
     
     // выражение если нету галочки то .Checkmark если есть то .None
-    cell.accessoryType = restaurantAlreadyVisited[indexPath.row] ? .Checkmark : .None
+    cell.accessoryType = myRestaurants[indexPath.row].isVisited ? .Checkmark : .None
+//    cell.accessoryType = restaurantAlreadyVisited[indexPath.row] ? .Checkmark : .None
     
     // красим галочку в красный
     cell.tintColor = UIColor.redColor()
@@ -242,7 +270,7 @@ class MyRestrauntsTableViewController: UITableViewController{
     if segue.identifier == "showDetailsSegue" {
       if let indexPath = self.tableView.indexPathForSelectedRow{
         let destinationVC = segue.destinationViewController as! DetailsViewController
-        destinationVC.restaurantImages = self.restaurantImage[indexPath.row]
+        destinationVC.restaurantImages = self.myRestaurants[indexPath.row].image
       }
     }
   }
