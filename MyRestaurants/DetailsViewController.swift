@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     
+    // отображение картинок
     self.restaurantImageView.image = UIImage(named: restaurantImages)
   }
 
