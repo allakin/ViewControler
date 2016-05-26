@@ -114,6 +114,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XIA-QT-liF" id="4uz-by-y9Q"/>
+                                    <outlet property="delegate" destination="XIA-QT-liF" id="EE4-zU-fdZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -59,7 +59,6 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
       cell.keyLebal.text = "Был там"
       cell.valueLebal.text = restaurant.isVisited ? "Да" : "Нет"
     default:
-    case 1:
       cell.keyLebal.text = ""
       cell.valueLebal.text = ""
     }
