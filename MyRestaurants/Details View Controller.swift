@@ -52,16 +52,17 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     case 1:
       cell.keyLebal.text = "Тип"
       cell.valueLebal.text = restaurant.type
-    case 3:
+    case 2:
       cell.keyLebal.text = "Расположение"
       cell.valueLebal.text = restaurant.location
-    case 4:
+    case 3:
       cell.keyLebal.text = "Был там"
       cell.valueLebal.text = restaurant.isVisited ? "Да" : "Нет"
     default:
       cell.keyLebal.text = ""
       cell.valueLebal.text = ""
     }
+    return cell
   }
 
     /*
