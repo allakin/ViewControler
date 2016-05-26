@@ -270,7 +270,7 @@ class MyRestrauntsTableViewController: UITableViewController{
     if segue.identifier == "showDetailsSegue" {
       if let indexPath = self.tableView.indexPathForSelectedRow{
         let destinationVC = segue.destinationViewController as! DetailsViewController
-        destinationVC.restaurantImages = self.myRestaurants[indexPath.row].image
+        destinationVC.restaurant = self.myRestaurants[indexPath.row]
       }
     }
   }
