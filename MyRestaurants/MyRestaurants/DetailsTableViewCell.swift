@@ -10,6 +10,9 @@ import UIKit
 
 class DetailsTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var keyLebal: UILabel!
+  @IBOutlet weak var valueLebal: UILabel!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
