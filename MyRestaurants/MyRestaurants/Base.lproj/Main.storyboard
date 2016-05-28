@@ -134,7 +134,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xya-HT-FgJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u9m-oQ-Heu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="u9m-oQ-Heu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ric-LB-c7a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

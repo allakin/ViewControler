@@ -155,9 +155,15 @@ class MyRestrauntsTableViewController: UITableViewController{
     
   }
   
+  // запрещаяем движение навигационной панели на внутреннем ViewController
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.hidesBarsOnSwipe = true // спрячится навигенен бар
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+    
     // убирает title на внутреннем ViewController
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     

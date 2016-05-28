@@ -22,6 +22,14 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.restaurantImageView.image = UIImage(named: restaurant.image)
   }
 
+  // запрещаяем движение навигационной панели на внутреннем ViewController
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.hidesBarsOnSwipe = false // не спрачится навигеншен бар
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
+  }
+  
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,6 +72,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     return cell
   }
+  
 
     /*
     // MARK: - Navigation
