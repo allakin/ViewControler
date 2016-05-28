@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    // добавление фона цвета к наигатор бару
+    UINavigationBar.appearance().barTintColor = UIColor(red: 201 / 255, green: 81 / 255, blue: 0.0, alpha: 1.0)
+    
+    //изменение цвета шрифта на навигашон бар
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    
+    // поменять шрифт и цвет в навигашион бар
+    if let font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 22.0){
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font]
+    }
     return true
   }
   
