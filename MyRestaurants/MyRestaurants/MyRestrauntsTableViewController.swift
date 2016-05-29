@@ -224,11 +224,12 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     return cell
   }
-  
-  override func prefersStatusBarHidden() -> Bool {
-    return true
-  }
-  
+ 
+  // отображение уровня заряда
+//  override func prefersStatusBarHidden() -> Bool {
+//    return true
+//  }
+//  
   /*
    // Override to support conditional editing of the table view.
    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

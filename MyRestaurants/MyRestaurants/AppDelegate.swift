@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font]
     }
     return true
+    
+    //изменения заряда и времени на белый
+    UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
   }
   
   func applicationWillResignActive(application: UIApplication) {
