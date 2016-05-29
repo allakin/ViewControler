@@ -20,6 +20,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // отображение картинок
     self.restaurantImageView.image = UIImage(named: restaurant.image)
+    // задан тайтл для одного ресторана
+    title = restaurant.name
   }
 
   // запрещаяем движение навигационной панели на внутреннем ViewController

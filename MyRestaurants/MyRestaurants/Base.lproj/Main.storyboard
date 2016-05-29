@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--My Restaurants-->
         <scene sceneID="OV0-Ke-IaO">
             <objects>
                 <tableViewController id="gbH-lm-lfK" customClass="MyRestrauntsTableViewController" customModule="MyRestaurants" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                             <outlet property="delegate" destination="gbH-lm-lfK" id="VQk-XI-gmM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="81N-2k-kyE"/>
+                    <navigationItem key="navigationItem" title="My Restaurants" id="81N-2k-kyE"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                 </tableViewController>
