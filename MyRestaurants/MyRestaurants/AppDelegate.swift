@@ -26,10 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 22.0){
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font]
     }
-    return true
     
     //изменения заряда и времени на белый
-    UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+    UIApplication.sharedApplication().statusBarStyle = .LightContent
+    
+    return true
   }
   
   func applicationWillResignActive(application: UIApplication) {
