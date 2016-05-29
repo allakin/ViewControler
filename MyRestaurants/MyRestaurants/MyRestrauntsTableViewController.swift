@@ -21,7 +21,7 @@ class MyRestrauntsTableViewController: UITableViewController{
   
   // заменили верхние массивы на новый
   var myRestaurants: [Restaurant] = [
-    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "Уфа", image: "ogonek.jpg", isVisited: false),
+    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: false),
     Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
     Restaurant(name: "Bonsai", type: "ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
     Restaurant(name: "Дастархан", type: "ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
@@ -167,6 +167,8 @@ class MyRestrauntsTableViewController: UITableViewController{
     // убирает title на внутреннем ViewController
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     
+//    self.tableView.rowHeight = 85
+//    self.tableView.rowHeight = UITableViewAutomaticDimension
   }
   
   override func didReceiveMemoryWarning() {

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Restaurants-->
@@ -94,19 +95,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-7m-YEi">
-                                                    <rect key="frame" x="8" y="11" width="121" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-7m-YEi">
+                                                    <rect key="frame" x="8" y="11" width="26" height="21"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycr-UP-aLO">
-                                                    <rect key="frame" x="137" y="11" width="175" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycr-UP-aLO">
+                                                    <rect key="frame" x="137" y="11" width="185" height="21"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ycr-UP-aLO" secondAttribute="bottom" constant="3" id="AKc-O5-un4"/>
+                                                <constraint firstItem="Ycr-UP-aLO" firstAttribute="trailing" secondItem="4Pw-4O-MJ9" secondAttribute="trailingMargin" constant="10" id="Hsv-fr-M5X"/>
+                                                <constraint firstItem="nOk-7m-YEi" firstAttribute="leading" secondItem="4Pw-4O-MJ9" secondAttribute="leadingMargin" id="M40-Vx-Kk3"/>
+                                                <constraint firstItem="Ycr-UP-aLO" firstAttribute="leading" secondItem="4Pw-4O-MJ9" secondAttribute="leadingMargin" constant="129" id="cwz-gb-yMQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nOk-7m-YEi" secondAttribute="bottom" constant="3" id="dsE-g3-uMt"/>
+                                                <constraint firstItem="Ycr-UP-aLO" firstAttribute="top" secondItem="4Pw-4O-MJ9" secondAttribute="topMargin" constant="3" id="hXc-wq-UGC"/>
+                                                <constraint firstItem="nOk-7m-YEi" firstAttribute="top" secondItem="4Pw-4O-MJ9" secondAttribute="topMargin" constant="3" id="yDv-qU-PXn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="keyLebal" destination="nOk-7m-YEi" id="tdR-iU-hvI"/>
