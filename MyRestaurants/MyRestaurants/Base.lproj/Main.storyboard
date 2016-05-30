@@ -169,11 +169,26 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RM-pa-R0P">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaZ-gu-WMB">
+                                        <rect key="frame" x="8" y="127" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.88351362179487181" green="0.0" blue="0.0082712385459563047" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="bad"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riA-Lz-3EB">
+                                        <rect key="frame" x="95" y="127" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.91917067307692313" green="0.54647337500014237" blue="0.10869569338929957" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="so-so"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQv-8M-bYy">
+                                        <rect key="frame" x="182" y="127" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.0021901872513823027" green="0.77133413461538458" blue="0.0033982749380209809" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="good"/>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вы уже сдесь побывали. Вам понравилось?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="957-pQ-fmK">
-                                        <rect key="frame" x="25" y="8" width="200" height="57"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
+                                        <rect key="frame" x="13" y="8" width="225" height="57"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
                                 </subviews>
                             </view>
@@ -205,6 +220,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bad" width="192" height="192"/>
+        <image name="good" width="192" height="192"/>
         <image name="reviewBG" width="302" height="568"/>
+        <image name="so-so" width="192" height="192"/>
     </resources>
 </document>
