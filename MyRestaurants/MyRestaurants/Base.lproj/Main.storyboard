@@ -129,6 +129,16 @@
                                     <outlet property="delegate" destination="XIA-QT-liF" id="EE4-zU-fdZ"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-bL-o4E">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cgF-Ll-YU2"/>
+                                    <barButtonItem systemItem="action" id="Mlo-Bh-vDU"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BtV-o6-gsv"/>
+                                    <barButtonItem systemItem="compose" id="bph-6D-zhQ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QE6-P1-lrM"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

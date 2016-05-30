@@ -30,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //изменения заряда и времени на белый
     UIApplication.sharedApplication().statusBarStyle = .LightContent
     
+    // цвет барбаттон(внизу 2 кнопку) tintColor цвет самих кнопок
+    UIBarButtonItem.appearance().tintColor = UIColor(red: 201 / 255, green: 81 / 255, blue: 0.0, alpha: 1.0)
+    //сама эта панель
+    UIToolbar.appearance().barTintColor = UIColor(red: 235 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1.0)
     return true
   }
   

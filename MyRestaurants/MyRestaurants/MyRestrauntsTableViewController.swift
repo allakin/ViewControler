@@ -167,8 +167,8 @@ class MyRestrauntsTableViewController: UITableViewController{
     // убирает title на внутреннем ViewController
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     
-//    self.tableView.rowHeight = 85
-//    self.tableView.rowHeight = UITableViewAutomaticDimension
+    //    ыудаюефидуМшуцюкщцРушпре = 85
+    //    ыудаюефидуМшуцюкщцРушпре = ГШЕфидуМшуцФгещьфешсВшьутышщт
   }
   
   override func didReceiveMemoryWarning() {
