@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "respublika.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "respublika.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "respublika@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "respublika@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "respublika@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "respublika@3x.jpg"
     }
   ],
   "info" : {

@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "indokitay.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "indokitay.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "indokitay@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "indokitay@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "indokitay@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "indokitay@3x.jpg"
     }
   ],
   "info" : {

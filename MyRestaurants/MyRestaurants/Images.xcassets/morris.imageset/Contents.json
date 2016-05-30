@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "morris.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "morris.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "morris@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "morris@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "morris@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "morris@3x.jpg"
     }
   ],
   "info" : {

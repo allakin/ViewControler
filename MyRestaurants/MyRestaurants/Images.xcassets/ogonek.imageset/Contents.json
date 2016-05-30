@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ogonek.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "ogonek.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "ogonek@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "ogonek@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "ogonek@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "ogonek@3x.jpg"
     }
   ],
   "info" : {

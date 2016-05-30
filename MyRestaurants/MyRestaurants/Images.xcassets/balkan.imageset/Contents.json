@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "balkan.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "balkan.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "balkan@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "balkan@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "balkan@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "balkan@3x.jpg"
     }
   ],
   "info" : {

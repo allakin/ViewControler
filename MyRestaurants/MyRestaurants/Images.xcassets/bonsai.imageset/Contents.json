@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bonsai.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "bonsai.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "bonsai@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "bonsai@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "bonsai@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "bonsai@3x.jpg"
     }
   ],
   "info" : {

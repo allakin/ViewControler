@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "speakeasy.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "speakeasy.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "speakeasy@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "speakeasy@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "speakeasy@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "speakeasy@3x.jpg"
     }
   ],
   "info" : {

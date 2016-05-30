@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "shok.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "shok.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "shok@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "shok@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "shok@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "shok@3x.jpg"
     }
   ],
   "info" : {

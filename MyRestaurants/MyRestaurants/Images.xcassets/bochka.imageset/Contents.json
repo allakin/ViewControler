@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bochka.jpg",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "bochka.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "bochka@2x.jpg",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "bochka@2x.jpg"
     },
     {
       "idiom" : "universal",
-      "filename" : "bochka@3x.jpg",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "bochka@3x.jpg"
     }
   ],
   "info" : {
