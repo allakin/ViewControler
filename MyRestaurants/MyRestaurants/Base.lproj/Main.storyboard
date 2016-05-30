@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1047" y="349"/>
         </scene>
-        <!--View Controller-->
+        <!--Quick Review View Controller-->
         <scene sceneID="Zdp-0V-l0t">
             <objects>
-                <viewController id="KAH-SW-HCd" sceneMemberID="viewController">
+                <viewController id="KAH-SW-HCd" customClass="QuickReviewViewController" customModule="MyRestaurants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DLE-4H-dTQ"/>
                         <viewControllerLayoutGuide type="bottom" id="RT5-3p-2uB"/>
@@ -221,6 +221,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="backgraundImageView" destination="yUJ-BQ-R6c" id="es4-51-ytf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT3-lK-33g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZWb-ko-9Rc" userLabel="Exit" sceneMemberID="exit"/>

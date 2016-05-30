@@ -15,6 +15,7 @@
 		7303F00B1CF21197004DC896 /* MyRestrauntsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */; };
 		7303F00D1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */; };
 		738CB4121CF605BA00DEEFA3 /* Details View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */; };
+		73F60FBC1CFCD2C700293E64 /* QuickReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */; };
 		73FF89DB1CF7916C00D2026A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF89DA1CF7916C00D2026A /* Restaurant.swift */; };
 		73FF89DD1CF79F3C00D2026A /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRestrauntsTableViewController.swift; sourceTree = "<group>"; };
 		7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRestarauntsTableViewCell.swift; sourceTree = "<group>"; };
 		738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Details View Controller.swift"; path = "../Details View Controller.swift"; sourceTree = "<group>"; };
+		73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickReviewViewController.swift; sourceTree = "<group>"; };
 		73FF89DA1CF7916C00D2026A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,19 +66,28 @@
 		7303EFF71CF21070004DC896 /* MyRestaurants */ = {
 			isa = PBXGroup;
 			children = (
-				738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */,
 				7303EFF81CF21070004DC896 /* AppDelegate.swift */,
 				7303F00A1CF21197004DC896 /* MyRestrauntsTableViewController.swift */,
+				7303EFFC1CF21070004DC896 /* Main.storyboard */,
+				7303F0011CF21070004DC896 /* LaunchScreen.storyboard */,
+				7301904A1CF2232A0020FB39 /* Images.xcassets */,
+				7301904C1CF223620020FB39 /* Launch Screen.storyboard */,
+				73F60FBD1CFCD2E900293E64 /* Supporting files */,
+			);
+			path = MyRestaurants;
+			sourceTree = "<group>";
+		};
+		73F60FBD1CFCD2E900293E64 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				7303F0041CF21070004DC896 /* Info.plist */,
+				738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */,
 				7303F00C1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift */,
 				73FF89DA1CF7916C00D2026A /* Restaurant.swift */,
 				73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */,
-				7303EFFC1CF21070004DC896 /* Main.storyboard */,
-				7303F0011CF21070004DC896 /* LaunchScreen.storyboard */,
-				7303F0041CF21070004DC896 /* Info.plist */,
-				7301904A1CF2232A0020FB39 /* Images.xcassets */,
-				7301904C1CF223620020FB39 /* Launch Screen.storyboard */,
+				73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */,
 			);
-			path = MyRestaurants;
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				73FF89DD1CF79F3C00D2026A /* DetailsTableViewCell.swift in Sources */,
 				73FF89DB1CF7916C00D2026A /* Restaurant.swift in Sources */,
 				7303F00B1CF21197004DC896 /* MyRestrauntsTableViewController.swift in Sources */,
+				73F60FBC1CFCD2C700293E64 /* QuickReviewViewController.swift in Sources */,
 				7303EFF91CF21070004DC896 /* AppDelegate.swift in Sources */,
 				7303F00D1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift in Sources */,
 				738CB4121CF605BA00DEEFA3 /* Details View Controller.swift in Sources */,

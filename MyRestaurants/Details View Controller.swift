@@ -11,6 +11,10 @@ import UIKit
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet var restaurantImageView: UIImageView!
+  @IBOutlet var tableView: UITableView!
+  // вернуться на предыдущий экран
+  @IBAction func close(segue: UIStoryboardSegue) {
+  }
   var restaurant: Restaurant!
   
   override func viewDidLoad() {
