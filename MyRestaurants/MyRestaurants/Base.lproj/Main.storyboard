@@ -135,7 +135,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cgF-Ll-YU2"/>
                                     <barButtonItem systemItem="action" id="Mlo-Bh-vDU"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BtV-o6-gsv"/>
-                                    <barButtonItem systemItem="compose" id="bph-6D-zhQ"/>
+                                    <barButtonItem systemItem="compose" id="bph-6D-zhQ">
+                                        <connections>
+                                            <segue destination="KAH-SW-HCd" kind="modal" id="Gev-te-qqk"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QE6-P1-lrM"/>
                                 </items>
                             </toolbar>
@@ -173,16 +177,31 @@
                                         <rect key="frame" x="8" y="127" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.88351362179487181" green="0.0" blue="0.0082712385459563047" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="bad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riA-Lz-3EB">
                                         <rect key="frame" x="95" y="127" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.91917067307692313" green="0.54647337500014237" blue="0.10869569338929957" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="so-so"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQv-8M-bYy">
                                         <rect key="frame" x="182" y="127" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.0021901872513823027" green="0.77133413461538458" blue="0.0033982749380209809" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="good"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вы уже сдесь побывали. Вам понравилось?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="957-pQ-fmK">
                                         <rect key="frame" x="13" y="8" width="225" height="57"/>
@@ -198,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT3-lK-33g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="349"/>
+            <point key="canvasLocation" x="1448" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xya-HT-FgJ">
