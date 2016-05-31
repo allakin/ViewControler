@@ -28,6 +28,7 @@ class QuickReviewViewController: UIViewController {
       let scaleAnimation = CGAffineTransformMakeScale(0.0, 0.0)
       //изображение за пределами экрана
       let translationAnimation = CGAffineTransformMakeTranslation(0, 600)
+      //объединение 2-я анимаций
       windowView.transform = CGAffineTransformConcat(scaleAnimation, translationAnimation)
 
       
@@ -45,6 +46,7 @@ class QuickReviewViewController: UIViewController {
       let scaleAnimation = CGAffineTransformMakeScale(1.0, 1.0)
       //изображение на том месте на котором мы его установили
       let translationAnimation = CGAffineTransformMakeTranslation(0, 0)
+      //объединение 2-я анимаций
       self.windowView.transform = CGAffineTransformConcat(scaleAnimation, translationAnimation)
       
       }, completion: nil)

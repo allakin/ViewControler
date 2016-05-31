@@ -170,6 +170,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reviewBG" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-BQ-R6c">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzW-lq-9Tc">
+                                <rect key="frame" x="258" y="61" width="42" height="42"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <segue destination="ZWb-ko-9Rc" kind="unwind" unwindAction="close:" id="xOi-Vb-Hvn"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RM-pa-R0P">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <subviews>
@@ -211,13 +218,6 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzW-lq-9Tc">
-                                <rect key="frame" x="258" y="61" width="42" height="42"/>
-                                <state key="normal" image="close"/>
-                                <connections>
-                                    <segue destination="ZWb-ko-9Rc" kind="unwind" unwindAction="close:" id="xOi-Vb-Hvn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
