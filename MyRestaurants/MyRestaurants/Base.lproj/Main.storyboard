@@ -223,6 +223,7 @@
                     </view>
                     <connections>
                         <outlet property="backgraundImageView" destination="yUJ-BQ-R6c" id="es4-51-ytf"/>
+                        <outlet property="windowView" destination="4RM-pa-R0P" id="00G-jB-M88"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT3-lK-33g" userLabel="First Responder" sceneMemberID="firstResponder"/>

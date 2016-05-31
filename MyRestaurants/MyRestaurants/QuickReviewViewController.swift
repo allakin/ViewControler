@@ -11,6 +11,7 @@ import UIKit
 class QuickReviewViewController: UIViewController {
   
   @IBOutlet weak var backgraundImageView: UIImageView!
+  @IBOutlet weak var windowView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +23,26 @@ class QuickReviewViewController: UIViewController {
       darkBlurEffectView.frame = view.bounds
       backgraundImageView.didAddSubview(darkBlurEffectView)
       
+      // анимация сначала меняется маштаб
+      windowView.transform = CGAffineTransformMakeScale(0.0, 0.0)
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
+  override func viewDidAppear(animated: Bool) {
+    // анимация время 0.7 секунд, задержика 0
+    UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+      
+      let scaleAnimation = CGAffineTransformMakeScale(1.0, 1.0)
+      let translationAnimation = CGAffineTransformMakeTranslation(0, 0)
+      self.windowView.transform = CGAffineTransformConcat(scaleAnimation, translationAnimation)
+      
+      }, completion: nil)
+  }
 
     /*
     // MARK: - Navigation
