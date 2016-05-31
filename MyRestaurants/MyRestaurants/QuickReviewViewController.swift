@@ -24,7 +24,12 @@ class QuickReviewViewController: UIViewController {
       backgraundImageView.didAddSubview(darkBlurEffectView)
       
       // анимация сначала меняется маштаб
-      windowView.transform = CGAffineTransformMakeScale(0.0, 0.0)
+      //windowView.transform = CGAffineTransformMakeScale(0.0, 0.0)
+      let scaleAnimation = CGAffineTransformMakeScale(0.0, 0.0)
+      //изображение за пределами экрана
+      let translationAnimation = CGAffineTransformMakeTranslation(0, 600)
+      windowView.transform = CGAffineTransformConcat(scaleAnimation, translationAnimation)
+
       
     }
 
@@ -38,6 +43,7 @@ class QuickReviewViewController: UIViewController {
     UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
       
       let scaleAnimation = CGAffineTransformMakeScale(1.0, 1.0)
+      //изображение на том месте на котором мы его установили
       let translationAnimation = CGAffineTransformMakeTranslation(0, 0)
       self.windowView.transform = CGAffineTransformConcat(scaleAnimation, translationAnimation)
       
