@@ -219,6 +219,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-cd-YgE">
                                             <rect key="frame" x="258" y="61" width="42" height="42"/>
                                             <state key="normal" image="close"/>
+                                            <connections>
+                                                <segue destination="aSV-BN-M6T" kind="unwind" unwindAction="close:" id="pOq-yZ-v0O"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -227,8 +230,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="backgraundImageView" destination="6ob-mZ-X9j" id="nn5-DU-yh8"/>
+                        <outlet property="bottomLeft" destination="PYK-eg-QnC" id="JXl-F5-MbJ"/>
+                        <outlet property="bottomRight" destination="E7N-z9-FjP" id="qkb-NQ-zfm"/>
+                        <outlet property="topLeft" destination="2uB-yJ-ro3" id="TKC-Yd-sr9"/>
+                        <outlet property="topRight" destination="C6x-eV-5w3" id="ZAt-Md-b14"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMg-ql-raK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aSV-BN-M6T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047" y="1040"/>
         </scene>
