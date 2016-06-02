@@ -182,15 +182,39 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-yJ-ro3">
                                             <rect key="frame" x="66" y="190" width="90" height="90"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Pi-vKJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <state key="normal" image="facebook"/>
+                                                </button>
+                                            </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6x-eV-5w3">
                                             <rect key="frame" x="164" y="190" width="90" height="90"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32n-cB-Eql">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <state key="normal" image="g"/>
+                                                </button>
+                                            </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-z9-FjP">
                                             <rect key="frame" x="164" y="288" width="90" height="90"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7f-ud-wFF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <state key="normal" image="vk"/>
+                                                </button>
+                                            </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYK-eg-QnC">
                                             <rect key="frame" x="66" y="288" width="90" height="90"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Nd-iio">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <state key="normal" image="mail"/>
+                                                </button>
+                                            </subviews>
                                         </view>
                                     </subviews>
                                 </view>
@@ -302,8 +326,12 @@
     <resources>
         <image name="bad" width="192" height="192"/>
         <image name="close" width="128" height="128"/>
+        <image name="facebook" width="128" height="128"/>
+        <image name="g" width="128" height="128"/>
         <image name="good" width="192" height="192"/>
+        <image name="mail" width="128" height="128"/>
         <image name="reviewBG" width="302" height="568"/>
         <image name="so-so" width="192" height="192"/>
+        <image name="vk" width="128" height="128"/>
     </resources>
 </document>
