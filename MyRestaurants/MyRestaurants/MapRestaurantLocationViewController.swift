@@ -21,13 +21,30 @@ class MapRestaurantLocationViewController: UIViewController {
 		// создал экземпляр класса геокодер
 		let geocoder = CLGeocoder()
 		geocoder.geocodeAddressString(restaurant.location, completionHandler: {
-			placemark, error in
+			placemarks, error in
 			
 			// проверка на наличие ошибки
 			if error != nil{
 				print(error)
 				return
 			}
+			
+			// проверка массива placemarks
+			if placemarks != nil && placemarks?.count > 0 {
+				let placemark = placemarks![0] as! CLPlacemark
+				
+				// добавляем аннотации
+				let annotation = MKPointAnnotation()
+				annotation.title = self.restaurant.name
+				annotation.subtitle = self.restaurant.type
+				//аннотация должна быть прикрепленна в то место где распологается наш placemark
+				annotation.coordinate = placemark.location!.coordinate
+				
+				self.mapView.showAnnotations([annotation], animated: true)
+				//изначально все аннотации раскрыты
+				self.mapView.selectAnnotation(annotation, animated: true)
+			}
+			
 		})
 	}
 
