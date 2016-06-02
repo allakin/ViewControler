@@ -181,7 +181,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-yJ-ro3">
-                                            <rect key="frame" x="66" y="190" width="90" height="90"/>
+                                            <rect key="frame" x="72" y="194" width="90" height="90"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Pi-vKJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -190,7 +190,7 @@
                                             </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6x-eV-5w3">
-                                            <rect key="frame" x="164" y="190" width="90" height="90"/>
+                                            <rect key="frame" x="159" y="194" width="90" height="90"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32n-cB-Eql">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -199,7 +199,7 @@
                                             </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-z9-FjP">
-                                            <rect key="frame" x="164" y="288" width="90" height="90"/>
+                                            <rect key="frame" x="159" y="283" width="90" height="90"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7f-ud-wFF">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -208,7 +208,7 @@
                                             </subviews>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYK-eg-QnC">
-                                            <rect key="frame" x="66" y="288" width="90" height="90"/>
+                                            <rect key="frame" x="72" y="283" width="90" height="90"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Nd-iio">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -216,6 +216,10 @@
                                                 </button>
                                             </subviews>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-cd-YgE">
+                                            <rect key="frame" x="258" y="61" width="42" height="42"/>
+                                            <state key="normal" image="close"/>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <blurEffect style="dark"/>
