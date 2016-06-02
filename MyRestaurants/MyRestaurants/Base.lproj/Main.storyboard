@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="917" y="1096"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Restaurant Location View Controller-->
         <scene sceneID="dZW-eE-mG1">
             <objects>
-                <viewController id="ylg-21-SSM" sceneMemberID="viewController">
+                <viewController id="ylg-21-SSM" customClass="MapRestaurantLocationViewController" customModule="MyRestaurants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G76-JI-maN"/>
                         <viewControllerLayoutGuide type="bottom" id="LG4-Q6-DZg"/>
@@ -263,6 +263,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="buG-9V-TSs"/>
+                    <connections>
+                        <outlet property="mapView" destination="Kfx-DT-VJh" id="hop-Xr-hGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxd-i5-394" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

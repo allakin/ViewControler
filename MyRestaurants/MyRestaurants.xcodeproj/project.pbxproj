@@ -17,6 +17,7 @@
 		738CB4121CF605BA00DEEFA3 /* Details View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */; };
 		7393CA571D00A313008E67DF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393CA561D00A313008E67DF /* ShareViewController.swift */; };
 		7393CA5B1D00BC0A008E67DF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7393CA5A1D00BC0A008E67DF /* MapKit.framework */; };
+		7393CA5D1D00C27F008E67DF /* MapRestaurantLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393CA5C1D00C27F008E67DF /* MapRestaurantLocationViewController.swift */; };
 		73F60FBC1CFCD2C700293E64 /* QuickReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */; };
 		73FF89DB1CF7916C00D2026A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF89DA1CF7916C00D2026A /* Restaurant.swift */; };
 		73FF89DD1CF79F3C00D2026A /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		738CB4111CF605BA00DEEFA3 /* Details View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Details View Controller.swift"; path = "../Details View Controller.swift"; sourceTree = "<group>"; };
 		7393CA561D00A313008E67DF /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		7393CA5A1D00BC0A008E67DF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7393CA5C1D00C27F008E67DF /* MapRestaurantLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRestaurantLocationViewController.swift; sourceTree = "<group>"; };
 		73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickReviewViewController.swift; sourceTree = "<group>"; };
 		73FF89DA1CF7916C00D2026A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				73FF89DC1CF79F3C00D2026A /* DetailsTableViewCell.swift */,
 				73F60FBB1CFCD2C700293E64 /* QuickReviewViewController.swift */,
 				7393CA561D00A313008E67DF /* ShareViewController.swift */,
+				7393CA5C1D00C27F008E67DF /* MapRestaurantLocationViewController.swift */,
 			);
 			path = MyRestaurants;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				7303F00D1CF2146F004DC896 /* MyRestarauntsTableViewCell.swift in Sources */,
 				7393CA571D00A313008E67DF /* ShareViewController.swift in Sources */,
 				738CB4121CF605BA00DEEFA3 /* Details View Controller.swift in Sources */,
+				7393CA5D1D00C27F008E67DF /* MapRestaurantLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
