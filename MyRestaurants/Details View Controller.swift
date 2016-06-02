@@ -91,8 +91,14 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
 		}
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
-  
-
+	
+	// передача адреса ресторана в  MapRestaurantLocationViewController
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "ShowTheMap" {
+			let destinationVC = segue.destinationViewController as! MapRestaurantLocationViewController
+			destinationVC.restaurant = restaurant
+		}
+	}
     /*
     // MARK: - Navigation
 
