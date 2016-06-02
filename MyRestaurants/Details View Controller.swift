@@ -82,6 +82,15 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     return cell
   }
+	
+	// указание на 3 яйчейку в Details View Controller
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		if indexPath.row == 2{
+			// нужно осуществить переход на ShowTheMap
+			self.performSegueWithIdentifier("ShowTheMap", sender: nil)
+		}
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	}
   
 
     /*
