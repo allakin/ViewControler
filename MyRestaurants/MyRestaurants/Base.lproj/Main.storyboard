@@ -131,9 +131,17 @@
                             <outlet property="delegate" destination="5Ca-zD-Bsp" id="ns6-cB-hfs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TkW-jQ-Ptg"/>
+                    <navigationItem key="navigationItem" id="TkW-jQ-Ptg">
+                        <barButtonItem key="leftBarButtonItem" title="Отменить" id="J0i-bG-kGx">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="HL3-aP-X6D" kind="unwind" unwindAction="inwindBackToHomeScreen:" id="36l-vp-lxi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8d-Dp-8za" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HL3-aP-X6D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047" y="-324"/>
         </scene>

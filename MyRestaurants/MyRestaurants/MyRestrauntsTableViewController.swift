@@ -37,7 +37,11 @@ class MyRestrauntsTableViewController: UITableViewController{
     Restaurant(name: "Шок", type: "ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
     Restaurant(name: "Бочка", type: "ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
   
-  
+	
+	@IBAction func inwindBackToHomeScreen(segue:UIStoryboardSegue) {
+		
+	}
+	
   //var restaurantAlreadyVisited = [Bool](count: 15, repeatedValue: false)
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
