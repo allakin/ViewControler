@@ -75,6 +75,9 @@ class MapRestaurantLocationViewController: UIViewController, MKMapViewDelegate {
 		}
 		
 		// добавляем изображение к аннотации
+		let leftSideAnnotationView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
+		leftSideAnnotationView.image = UIImage(named: restaurant.image)
+		annotationView?.leftCalloutAccessoryView = leftSideAnnotationView
 		
 		return annotationView
 	}
