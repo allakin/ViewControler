@@ -138,6 +138,9 @@
                                 <segue destination="HL3-aP-X6D" kind="unwind" unwindAction="inwindBackToHomeScreen:" id="36l-vp-lxi"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="syu-32-cs3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8d-Dp-8za" userLabel="First Responder" sceneMemberID="firstResponder"/>

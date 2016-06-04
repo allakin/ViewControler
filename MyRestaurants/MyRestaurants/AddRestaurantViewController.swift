@@ -10,6 +10,8 @@ import UIKit
 
 class AddRestaurantViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+	@IBOutlet weak var imageView: UIImageView!
+	
 	override func viewDidLoad() {
 					super.viewDidLoad()
 
@@ -37,6 +39,9 @@ class AddRestaurantViewController: UIViewController, UIImagePickerControllerDele
 		}
 	}
 	
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+		
+	}
 	
 	/*
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
