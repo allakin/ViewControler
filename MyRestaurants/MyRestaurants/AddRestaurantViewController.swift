@@ -11,6 +11,12 @@ import UIKit
 class AddRestaurantViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var typeTextField: UITextField!
+	@IBOutlet weak var yesButton: UIButton!
+	@IBOutlet weak var noButton: UIButton!
+	
+	var isVisited = false
 	
 	override func viewDidLoad() {
 					super.viewDidLoad()
