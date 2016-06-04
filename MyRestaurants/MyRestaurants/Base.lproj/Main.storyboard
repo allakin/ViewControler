@@ -280,12 +280,14 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cgF-Ll-YU2"/>
                                     <barButtonItem systemItem="action" id="Mlo-Bh-vDU">
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="3Kg-KP-h5V" kind="modal" id="IIf-Oc-fSK"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BtV-o6-gsv"/>
                                     <barButtonItem systemItem="compose" id="bph-6D-zhQ">
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="KAH-SW-HCd" kind="modal" id="Gev-te-qqk"/>
                                         </connections>
