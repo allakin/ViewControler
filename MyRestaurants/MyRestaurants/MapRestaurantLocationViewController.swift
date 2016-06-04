@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapRestaurantLocationViewController: UIViewController {
+class MapRestaurantLocationViewController: UIViewController, MKMapViewDelegate {
 	
 	// обозначение карты
 	@IBOutlet var mapView: MKMapView!
@@ -17,6 +17,9 @@ class MapRestaurantLocationViewController: UIViewController {
 
 	override func viewDidLoad() {
 					super.viewDidLoad()
+		
+		//установил кто мне будет поставлять данные (Сам себе)
+		mapView.delegate = self
 		
 		// создал экземпляр класса геокодер
 		let geocoder = CLGeocoder()
@@ -52,7 +55,29 @@ class MapRestaurantLocationViewController: UIViewController {
 					super.didReceiveMemoryWarning()
 					// Dispose of any resources that can be recreated.
 	}
-
+	
+	func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+		// создаем аннотацию
+		// индетификатор
+		let identifier = "CurrentPin"
+		
+		if annotation.isKindOfClass(MKUserLocation){
+			return nil
+		}
+		
+		// ищем свободные аннотации
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+		
+		// если аннотации нету то создаю ее
+		if annotationView == nil {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+			annotationView?.canShowCallout = true // отображаю аннотацию
+		}
+		
+		// добавляем изображение к аннотации
+		
+		return annotationView
+	}
 
 	/*
 	// MARK: - Navigation
