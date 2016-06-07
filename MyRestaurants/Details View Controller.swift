@@ -23,7 +23,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     // Do any additional setup after loading the view.
     
     // отображение картинок
-    self.restaurantImageView.image = UIImage(named: restaurant.image)
+    self.restaurantImageView.image = UIImage(data: restaurant.image)
     // задан тайтл для одного ресторана
     title = self.restaurant.name
     
@@ -75,7 +75,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
       cell.valueLebal.text = restaurant.location
     case 3:
       cell.keyLebal.text = "Был там"
-      cell.valueLebal.text = restaurant.isVisited ? "Да" : "Нет"
+      cell.valueLebal.text = restaurant.isVisited.boolValue ? "Да" : "Нет"
     default:
       cell.keyLebal.text = ""
       cell.valueLebal.text = ""

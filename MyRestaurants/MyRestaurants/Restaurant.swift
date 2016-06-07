@@ -12,9 +12,9 @@ import CoreData
 class Restaurant: NSManagedObject{
   @NSManaged var name: String!
   @NSManaged var type: String!
-  @NSManaged var image: String!
+  @NSManaged var image: NSData!
   @NSManaged var location: String!
-  @NSManaged var isVisited: NSNumber! 
+  @NSManaged var isVisited: NSNumber!
 //  
 //  init(name: String, type: String, location: String, image: String, isVisited: Bool) {
 //    self.name = name

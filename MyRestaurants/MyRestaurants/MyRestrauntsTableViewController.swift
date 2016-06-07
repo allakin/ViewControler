@@ -20,23 +20,24 @@ class MyRestrauntsTableViewController: UITableViewController{
 //  var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
   
   // заменили верхние массивы на новый
-  var myRestaurants: [Restaurant] = [
-    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: true),
-    Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
-    Restaurant(name: "Bonsai", type: "ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
-    Restaurant(name: "Дастархан", type: "ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
-    Restaurant(name: "Индокитай", type: "ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
-    Restaurant(name: "X.O", type: "ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
-    Restaurant(name: "Балкан Гриль", type: "ресторан", location: "Уфа", image: "balkan.jpg", isVisited: true ),
-    Restaurant(name: "Respublica", type: "ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
-    Restaurant(name: "Speak Easy", type: "ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
-    Restaurant(name: "Morris Pub", type: "ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
-    Restaurant(name: "Вкусные истории", type: "ресторан", location: "Уфа", image: "istorii.jpg", isVisited: false),
-    Restaurant(name: "Классик", type: "ресторан", location: "Уфа", image: "klassik.jpg", isVisited: false),
-    Restaurant(name: "Love&Life", type: "ресторан", location: "Уфа", image: "love.jpg", isVisited: false),
-    Restaurant(name: "Шок", type: "ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
-    Restaurant(name: "Бочка", type: "ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
-  
+	var myRestaurants: [Restaurant] = []
+//	var myRestaurants: [Restaurant] = [
+//    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: true),
+//    Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
+//    Restaurant(name: "Bonsai", type: "ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
+//    Restaurant(name: "Дастархан", type: "ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
+//    Restaurant(name: "Индокитай", type: "ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
+//    Restaurant(name: "X.O", type: "ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
+//    Restaurant(name: "Балкан Гриль", type: "ресторан", location: "Уфа", image: "balkan.jpg", isVisited: true ),
+//    Restaurant(name: "Respublica", type: "ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
+//    Restaurant(name: "Speak Easy", type: "ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
+//    Restaurant(name: "Morris Pub", type: "ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
+//    Restaurant(name: "Вкусные истории", type: "ресторан", location: "Уфа", image: "istorii.jpg", isVisited: false),
+//    Restaurant(name: "Классик", type: "ресторан", location: "Уфа", image: "klassik.jpg", isVisited: false),
+//    Restaurant(name: "Love&Life", type: "ресторан", location: "Уфа", image: "love.jpg", isVisited: false),
+//    Restaurant(name: "Шок", type: "ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
+//    Restaurant(name: "Бочка", type: "ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
+//  
 	
 	@IBAction func inwindBackToHomeScreen(segue:UIStoryboardSegue) {
 		
@@ -204,12 +205,12 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     // Configure the cell...
     
-    cell.thumbnailImageView.image = UIImage(named: myRestaurants[indexPath.row].image)
+    cell.thumbnailImageView.image = UIImage(data: myRestaurants[indexPath.row].image)
     
     cell.nameLabel.text = myRestaurants[indexPath.row].name
     cell.locationLabel.text = myRestaurants[indexPath.row].location
     cell.typeLabel.text = myRestaurants[indexPath.row].type
-				cell.cheakImageView.hidden = !myRestaurants[indexPath.row].isVisited
+				cell.cheakImageView.hidden = !myRestaurants[indexPath.row].isVisited.boolValue
     
 //    cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
 //    cell.nameLabel.text = restaurantNames[indexPath.row]
