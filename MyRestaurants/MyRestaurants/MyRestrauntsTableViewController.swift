@@ -21,13 +21,13 @@ class MyRestrauntsTableViewController: UITableViewController{
   
   // заменили верхние массивы на новый
   var myRestaurants: [Restaurant] = [
-    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: false),
+    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: true),
     Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
     Restaurant(name: "Bonsai", type: "ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
     Restaurant(name: "Дастархан", type: "ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
     Restaurant(name: "Индокитай", type: "ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
     Restaurant(name: "X.O", type: "ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
-    Restaurant(name: "Балкан Гриль", type: "ресторан", location: "Уфа", image: "balkan.jpg", isVisited: false),
+    Restaurant(name: "Балкан Гриль", type: "ресторан", location: "Уфа", image: "balkan.jpg", isVisited: true ),
     Restaurant(name: "Respublica", type: "ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
     Restaurant(name: "Speak Easy", type: "ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
     Restaurant(name: "Morris Pub", type: "ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
@@ -209,6 +209,7 @@ class MyRestrauntsTableViewController: UITableViewController{
     cell.nameLabel.text = myRestaurants[indexPath.row].name
     cell.locationLabel.text = myRestaurants[indexPath.row].location
     cell.typeLabel.text = myRestaurants[indexPath.row].type
+				cell.cheakImageView.hidden = !myRestaurants[indexPath.row].isVisited
     
 //    cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
 //    cell.nameLabel.text = restaurantNames[indexPath.row]
@@ -220,11 +221,11 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     
     // выражение если нету галочки то .Checkmark если есть то .None
-    cell.accessoryType = myRestaurants[indexPath.row].isVisited ? .Checkmark : .None
+    //cell.accessoryType = myRestaurants[indexPath.row].isVisited ? .Checkmark : .None
 //    cell.accessoryType = restaurantAlreadyVisited[indexPath.row] ? .Checkmark : .None
     
     // красим галочку в красный
-    cell.tintColor = UIColor.redColor()
+    //cell.tintColor = UIColor.redColor()
     
     // cell.accessoryView = UIImageView(image: UIImage(named: "check-icon-green.png"))
     

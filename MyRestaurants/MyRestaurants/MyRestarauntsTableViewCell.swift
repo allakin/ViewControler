@@ -14,6 +14,8 @@ class MyRestarauntsTableViewCell: UITableViewCell {
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var typeLabel: UILabel!
+	 @IBOutlet weak var cheakImageView: UIImageView!
+	
   
   
     override func awakeFromNib() {
