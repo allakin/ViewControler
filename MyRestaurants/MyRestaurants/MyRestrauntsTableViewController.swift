@@ -21,6 +21,8 @@ class MyRestrauntsTableViewController: UITableViewController{
   
   // заменили верхние массивы на новый
 	var myRestaurants: [Restaurant] = []
+	// переменная поиска
+	var searchContller: UISearchController!
 //	var myRestaurants: [Restaurant] = [
 //    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: true),
 //    Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
