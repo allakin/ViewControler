@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyRestrauntsTableViewController: UITableViewController{
+class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpdating{
   
 //  // переменная с масивов в котором уже есть рестораны по умолчанию
 //  var restaurantNames = ["Ogonek Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
@@ -23,6 +23,7 @@ class MyRestrauntsTableViewController: UITableViewController{
 	var myRestaurants: [Restaurant] = []
 	// переменная поиска
 	var searchContller: UISearchController!
+	var searchResultArray: [Restaurant] = []
 //	var myRestaurants: [Restaurant] = [
 //    Restaurant(name: "Ogonёk Grill&Bar", type: "ресторан", location: "г. Уфа, ул. Ставропольская 23, офис 23/2", image: "ogonek.jpg", isVisited: true),
 //    Restaurant(name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
@@ -187,6 +188,23 @@ class MyRestrauntsTableViewController: UITableViewController{
 			//определить контекст в котором будет производиться поиск
 			definesPresentationContext = true
   }
+	
+	func filterContentFor(searchText: String) {
+		searchResultArray = myRestaurants.filter({ (resraurant: Restaurant) -> Bool in
+			//rangeOfString возволяет найти имя в зависимости поисковым запросам
+			let machedName = resraurant.name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil)
+		
+			return machedName != nil
+		})
+	}
+	
+	func updateSearchResultsForSearchController(searchController: UISearchController) {
+		//то что мы вбиваем в строку
+		let searchText = searchContller.searchBar.text
+		filterContentFor(searchText!)
+		
+		tableView.reloadData()
+	}
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
