@@ -194,6 +194,7 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 			searchContller.dimsBackgroundDuringPresentation = false
 			
 			searchContller.searchBar.tintColor = UIColor.whiteColor()
+			searchContller.searchBar.barTintColor = UIColor(red: 184 / 255, green: 226 / 255, blue: 181 / 255, alpha: 1.0)
   }
 	
 	func filterContentFor(searchText: String) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurantViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,6 +17,7 @@ class AddRestaurantViewController: UIViewController, UIImagePickerControllerDele
 	@IBOutlet weak var yesButton: UIButton!
 	@IBOutlet weak var noButton: UIButton!
 	
+	var restaurant: Restaurant!
 	var isVisited = false
 	
 	override func viewDidLoad() {

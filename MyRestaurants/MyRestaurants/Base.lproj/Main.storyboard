@@ -240,6 +240,27 @@
                                     <rect key="frame" x="0.0" y="64" width="320" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LdF-bL-o4E">
+                                    <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <items>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cgF-Ll-YU2"/>
+                                        <barButtonItem systemItem="action" id="Mlo-Bh-vDU">
+                                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="3Kg-KP-h5V" kind="modal" id="IIf-Oc-fSK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="BtV-o6-gsv"/>
+                                        <barButtonItem systemItem="compose" id="bph-6D-zhQ">
+                                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="KAH-SW-HCd" kind="modal" id="Gev-te-qqk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QE6-P1-lrM"/>
+                                    </items>
+                                </toolbar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ebM-ws-Jmr" customClass="DetailsTableViewCell" customModule="MyRestaurants" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="392" width="320" height="44"/>
@@ -282,26 +303,6 @@
                                     <outlet property="delegate" destination="XIA-QT-liF" id="EE4-zU-fdZ"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-bL-o4E">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cgF-Ll-YU2"/>
-                                    <barButtonItem systemItem="action" id="Mlo-Bh-vDU">
-                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="3Kg-KP-h5V" kind="modal" id="IIf-Oc-fSK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BtV-o6-gsv"/>
-                                    <barButtonItem systemItem="compose" id="bph-6D-zhQ">
-                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="KAH-SW-HCd" kind="modal" id="Gev-te-qqk"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QE6-P1-lrM"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
