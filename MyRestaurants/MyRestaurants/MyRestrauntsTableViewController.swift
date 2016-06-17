@@ -187,6 +187,13 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 			
 			//определить контекст в котором будет производиться поиск
 			definesPresentationContext = true
+			
+			
+			searchContller.searchResultsUpdater = self
+			//текущие результаты были не активные
+			searchContller.dimsBackgroundDuringPresentation = false
+			
+			searchContller.searchBar.tintColor = UIColor.whiteColor()
   }
 	
 	func filterContentFor(searchText: String) {
@@ -319,7 +326,7 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
     if segue.identifier == "showDetailsSegue" {
       if let indexPath = self.tableView.indexPathForSelectedRow{
         let destinationVC = segue.destinationViewController as! DetailsViewController
-							destinationVC.restaurant = (searchContller.active) ? searchResultArray[indexPath.row] : self.myRestaurants[indexPath.row]
+							destinationVC.restaurant = (searchContller.active) ? searchResultArray[indexPath.row] : myRestaurants[indexPath.row]
       }
     }
   }
