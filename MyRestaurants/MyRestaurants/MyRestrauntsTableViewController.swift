@@ -176,6 +176,16 @@ class MyRestrauntsTableViewController: UITableViewController{
     
     //    ыудаюефидуМшуцюкщцРушпре = 85
     //    ыудаюефидуМшуцюкщцРушпре = ГШЕфидуМшуцФгещьфешсВшьутышщт
+			
+			//экземпляр где там поиск будет в этом контролере
+			searchContller = UISearchController(searchResultsController: nil)
+			//отображает поика на навигешен контролер
+			searchContller.searchBar.sizeToFit()
+			// место для отображение поиска
+			tableView.tableHeaderView = searchContller.searchBar
+			
+			//определить контекст в котором будет производиться поиск
+			definesPresentationContext = true
   }
   
   override func didReceiveMemoryWarning() {
