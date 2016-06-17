@@ -220,9 +220,11 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return myRestaurants.count
+			if searchContller.active {
+				return searchResultArray.count
+			} else{
+				return myRestaurants.count
+			}
     //return restaurantNames.count
   }
   
@@ -236,11 +238,12 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
     // Configure the cell...
     
     cell.thumbnailImageView.image = UIImage(data: myRestaurants[indexPath.row].image)
-    
-    cell.nameLabel.text = myRestaurants[indexPath.row].name
-    cell.locationLabel.text = myRestaurants[indexPath.row].location
-    cell.typeLabel.text = myRestaurants[indexPath.row].type
-				cell.cheakImageView.hidden = !myRestaurants[indexPath.row].isVisited.boolValue
+			
+			let restaurant = (searchContller.active) ? searchResultArray[indexPath.row] : myRestaurants[indexPath.row]
+    cell.nameLabel.text = restaurant.name
+    cell.locationLabel.text = restaurant.location
+    cell.typeLabel.text = restaurant.type
+				cell.cheakImageView.hidden = !restaurant.isVisited.boolValue
     
 //    cell.thumbnailImageView.image = UIImage(named: restaurantImage[indexPath.row])
 //    cell.nameLabel.text = restaurantNames[indexPath.row]
@@ -268,14 +271,17 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 //    return true
 //  }
 //  
-  /*
-   // Override to support conditional editing of the table view.
-   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-   // Return NO if you do not want the specified item to be editable.
-   return true
-   }
-   */
-  
+	
+	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+		
+		if searchContller.active {
+			return false
+		} else {
+			return true
+		}
+	}
+
+	
   /*
    // Override to support editing the table view.
    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -313,7 +319,7 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
     if segue.identifier == "showDetailsSegue" {
       if let indexPath = self.tableView.indexPathForSelectedRow{
         let destinationVC = segue.destinationViewController as! DetailsViewController
-        destinationVC.restaurant = self.myRestaurants[indexPath.row]
+							destinationVC.restaurant = (searchContller.active) ? searchResultArray[indexPath.row] : self.myRestaurants[indexPath.row]
       }
     }
   }
