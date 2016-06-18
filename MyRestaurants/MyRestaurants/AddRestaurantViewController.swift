@@ -101,6 +101,24 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 		performSegueWithIdentifier("unwindBackToHomeScreen", sender: self)
 	}
 	
+	@IBAction func isRestaurantVisited(sender: AnyObject) {
+		
+		var pressedButton = sender as! UIButton
+		
+		noButton.backgroundColor = UIColor(red:0.15, green:0.71, blue:0.27, alpha:1.00)
+		
+		if pressedButton == yesButton {
+			isVisited = true
+			yesButton.backgroundColor = UIColor(red:0.15, green:0.71, blue:0.27, alpha:1.00)
+			noButton.backgroundColor = UIColor.grayColor()
+		} else if pressedButton == noButton {
+			isVisited == false
+			yesButton.backgroundColor = UIColor.grayColor()
+			noButton.backgroundColor = UIColor(red:0.15, green:0.71, blue:0.27, alpha:1.00)
+		}
+		
+	}
+	
 	/*
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
