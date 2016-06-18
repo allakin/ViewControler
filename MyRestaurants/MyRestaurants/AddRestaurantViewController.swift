@@ -38,6 +38,8 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 		if indexPath.row == 0 {
 			if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
 				let imagePicker = UIImagePickerController()
+				//добавляю картинки я сам
+				imagePicker.delegate = self
 				// недоступно режим редактирование изображений
 				imagePicker.allowsEditing = false
 				// откуда брать материалы
@@ -46,9 +48,24 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 				self.presentViewController(imagePicker, animated: true, completion: nil)
 			}
 		}
+		
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		
 	}
 	
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+		
+		imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+		imageView.contentMode = .ScaleAspectFill
+		imageView.clipsToBounds = true
+		
+		dismissViewControllerAnimated(true, completion: nil)
+		
+	}
+	
+	func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+		
+		UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
 		
 	}
 	
