@@ -42,7 +42,7 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 //    Restaurant(name: "Бочка", type: "ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
 //  
 	
-	@IBAction func inwindBackToHomeScreen(segue:UIStoryboardSegue) {
+	@IBAction func unwindBackToHomeScreen(segue:UIStoryboardSegue) {
 		
 	}
 	
