@@ -34,7 +34,7 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 	
 	// MARK: - Navigation
 
-	func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+	override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
 		if indexPath.row == 0 {
 			if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
 				let imagePicker = UIImagePickerController()
@@ -49,6 +49,39 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 	}
 	
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+		
+	}
+	
+	@IBAction func saveRestaurant() {
+		
+		// проверка на заполненность всех полей
+		var error = ""
+		
+		if nameTextField.text!.isEmpty {
+			error = "Название"
+		} else if typeTextField.text!.isEmpty {
+			error = "Тип"
+		} else if locationField.text!.isEmpty {
+			error = "Расположение"
+		}
+
+		if error != "" {
+				let alertController = UIAlertController(title: "Упс", message: "Вы не заполнили поле \(error), пожалуйсто заполноте его!", preferredStyle: .Alert)
+				let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+			
+				alertController.addAction(okAction)
+			
+				self.presentViewController(alertController, animated: true, completion: nil)
+			
+				return
+		}
+		
+		print("Значение поля nameTextFiled: " + nameTextField.text!)
+		print("Значение поля nameTextFiled: " + typeTextField.text!)
+		print("Значение поля nameTextFiled: " + locationField.text!)
+		print("Посетили ли вы ресторан: " + (self.isVisited ? "Да" : "Нет"))
+		
+		
 		
 	}
 	

@@ -140,10 +140,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Сохранить" id="syu-32-cs3">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveRestaurant" destination="5Ca-zD-Bsp" id="zrm-QB-xnp"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="CfF-zX-CXw" id="D6x-1s-ud5"/>
+                        <outlet property="imageView" destination="CfF-zX-CXw" id="GnW-yy-xcU"/>
                         <outlet property="locationField" destination="NGh-8r-pm3" id="gGf-lQ-X9b"/>
                         <outlet property="nameTextField" destination="5xw-s2-gQw" id="tPH-3q-nrW"/>
                         <outlet property="noButton" destination="DSe-Js-2YH" id="RyZ-zx-khV"/>
