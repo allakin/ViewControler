@@ -93,10 +93,20 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 				return
 		}
 		
-		print("Значение поля nameTextFiled: " + nameTextField.text!)
-		print("Значение поля nameTextFiled: " + typeTextField.text!)
-		print("Значение поля nameTextFiled: " + locationField.text!)
-		print("Посетили ли вы ресторан: " + (self.isVisited ? "Да" : "Нет"))
+		if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+			restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+			
+			restaurant.image = UIImagePNGRepresentation(imageView.image!)
+			restaurant.name = nameTextField.text
+			restaurant.type = typeTextField.text
+			restaurant.location = locationField.text
+			restaurant.isVisited = isVisited
+		}
+		
+		
+		
+		
+		
 		
 		performSegueWithIdentifier("unwindBackToHomeScreen", sender: self)
 	}

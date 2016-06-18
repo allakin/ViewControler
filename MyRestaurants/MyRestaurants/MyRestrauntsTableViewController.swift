@@ -243,7 +243,7 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
     
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MyRestarauntsTableViewCell
     
-    // Configure the cell...
+    // конфигурация ячейки
     
     cell.thumbnailImageView.image = UIImage(data: myRestaurants[indexPath.row].image)
 			
