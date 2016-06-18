@@ -9,11 +9,12 @@
 import UIKit
 import CoreData
 
-class AddRestaurantViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddRestaurantViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var typeTextField: UITextField!
+	@IBOutlet weak var locationField: UITextField!
 	@IBOutlet weak var yesButton: UIButton!
 	@IBOutlet weak var noButton: UIButton!
 	
