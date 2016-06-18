@@ -98,7 +98,7 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 		print("Значение поля nameTextFiled: " + locationField.text!)
 		print("Посетили ли вы ресторан: " + (self.isVisited ? "Да" : "Нет"))
 		
-		performSegueWithIdentifier("unwindBackToHomeScreen:", sender: self)
+		performSegueWithIdentifier("unwindBackToHomeScreen", sender: self)
 	}
 	
 	/*
