@@ -101,6 +101,14 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 			restaurant.type = typeTextField.text
 			restaurant.location = locationField.text
 			restaurant.isVisited = isVisited
+			
+			var error: NSError?
+			
+//			if managedObjectContext.save(&error) == false {
+//				//короткое описание ошибки
+//				print("Произошла ошибка \(error!.localizedDescription)")
+//				return
+//			}
 		}
 		
 		

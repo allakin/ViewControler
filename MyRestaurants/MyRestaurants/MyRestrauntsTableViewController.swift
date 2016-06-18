@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpdating{
+class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpdating, NSFetchedResultsControllerDelegate{
   
 //  // переменная с масивов в котором уже есть рестораны по умолчанию
 //  var restaurantNames = ["Ogonek Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "Х.О", "Балкан Гриль", "Respublica", "Speak Easy", "Moris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
@@ -18,7 +19,9 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 //  var restaurantType = ["ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан-клуб", "ресторан", "ресторан", "ресторанный комплекс", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан", "ресторан"]
 //  
 //  var restaurantLocation = ["Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа", "Уфа"]
-  
+	
+	var fetchedResultsController: NSFetchedResultsControllerDelegate!
+	
   // заменили верхние массивы на новый
 	var myRestaurants: [Restaurant] = []
 	// переменная поиска
@@ -167,6 +170,20 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     self.navigationController?.hidesBarsOnSwipe = true // спрячится навигенен бар
+			
+//			if  let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext{
+//				
+//				let fetchRequest = NSFetchRequest(entityName: "Restaurant")
+//				
+//				var error: NSError?
+//				
+//				myRestaurants = managedObjectContext.executeFetchRequest(fetchRequest, error: &error) as! [Restaurant]
+//				
+//				if  error != nil {
+//					print("Не удалось получить запись из ДБ \(error!.localizedDescription)")
+//				}
+//				
+//			}
   }
   
   override func viewDidLoad() {
@@ -195,6 +212,28 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 			
 			searchContller.searchBar.tintColor = UIColor.whiteColor()
 			searchContller.searchBar.barTintColor = UIColor(red: 184 / 255, green: 226 / 255, blue: 181 / 255, alpha: 1.0)
+			
+			// получаем данные из ДБ
+		 let fetchRequest = NSFetchRequest(entityName: "Restaurant")
+			//создаем дескриптор который будет выводить данные по name
+			let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+			fetchRequest.sortDescriptors = [sortDescriptor]
+			
+			if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+				fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+				
+				//кто будет следить за изменениями сами
+				fetchedResultsController.delegate = self
+				
+				var error: NSError?
+				
+				var result = fetchedResultsController.performSelector(error)
+				myRestaurants = fetchedResultsController.fetchedObjects as! [Restaurant]
+				
+				if result == false {
+					print("Описание ошибки \(error!.localizedDescription)")
+				}
+			}
   }
 	
 	func filterContentFor(searchText: String) {
@@ -212,6 +251,11 @@ class MyRestrauntsTableViewController: UITableViewController, UISearchResultsUpd
 		filterContentFor(searchText!)
 		
 		tableView.reloadData()
+	}
+	
+	
+	func controllerWillChangeContent(controller: NSFetchedResultsController) {
+		tableView.deginUpdates()
 	}
   
   override func didReceiveMemoryWarning() {
