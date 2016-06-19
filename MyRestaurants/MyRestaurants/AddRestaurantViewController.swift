@@ -104,11 +104,11 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
 			
 			var error: NSError?
 			
-//			if managedObjectContext.save(&error) == false {
-//				//короткое описание ошибки
-//				print("Произошла ошибка \(error!.localizedDescription)")
-//				return
-//			}
+			if managedObjectContext.save(&error) == false {
+				//короткое описание ошибки
+				print("Произошла ошибка \(error!.localizedDescription)")
+				return
+			}
 		}
 		
 		
